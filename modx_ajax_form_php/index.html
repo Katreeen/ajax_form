@@ -1,0 +1,44 @@
+<!-- Modal -->
+<div class="modal fade" id="modal[[+id]]" tabindex="-1" role="dialog" aria-labelledby="modal[[+id]]" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">[[+longtitle]]</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+    <form action="/ajax_form.php" method="post" class="ajax_form" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="name">Ваше имя</label>
+      <span class="error_name"></span>
+      <input type="text" class="form-control form-name" id="name" name="name" required="required">
+
+      <label for="email">E-maill</label>
+      <span class="error_email"></span>
+      <input type="email" class="form-control form-email" id="email" name="email" required="required">
+
+
+      <label for="tel">Номер телефона</label>
+      <span class="error_tel"></span>
+      <input type="tel" class="form-control form-tel" id="tel" name="tel" required="required">
+
+
+            <label for="formfile">Резюме</label>
+            <span class="error_tel"></span>
+            <input type="file" class="form-control form-control-file" id="formfile" name="formfile" required="required">
+
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" name="agree" value="1" id="agree" required>
+                <label class="form-check-label" for="agree">Я согласен на <a href="/policy" style="text-decoration:underline" target="_blank">обработку персональных данных</a></label>
+            </div>
+  </div>
+  <div class="response"></div>
+  <button type="submit" class="btn main_submit" id="sendmail">ОТПРАВИТЬ</button>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
